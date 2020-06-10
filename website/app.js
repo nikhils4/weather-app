@@ -53,7 +53,7 @@ const updateUI = async (temperature, nDate, feelings) => {
 const fetchWeatherData = async (URL, zip, APIKey) => {
   try {
     const request = await fetch(
-      `${URL}?zip=${zip},us&units=metric&APPID=${APIKey}`,
+      `${URL}?zip=${zip},in&units=metric&APPID=${APIKey}`,
     )
     const response = await request.json()
     const { main: {temp} } = response;
